@@ -18,7 +18,7 @@ class AwsSecretsCachedEnvVarProvider implements AwsSecretsEnvVarProviderInterfac
     private $decorated;
     private $ttl;
 
-    public function __construct(CacheItemPoolInterface $cacheItemPool, AwsSecretsEnvVarProviderInterface $decorated, int $ttl = 60)
+    public function __construct(CacheItemPoolInterface $cacheItemPool, AwsSecretsEnvVarProviderInterface $decorated, ?int $ttl = 60)
     {
         $this->cacheItemPool = $cacheItemPool;
         $this->decorated = $decorated;
